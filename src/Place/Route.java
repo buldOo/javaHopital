@@ -5,6 +5,7 @@ import com.company.ColossalCave;
 import java.util.Scanner;
 
 public class Route extends ColossalCave implements PlaceInterface {
+
     @Override
     public void Move() {
         Scanner scanner = new Scanner(System.in);
@@ -31,18 +32,28 @@ public class Route extends ColossalCave implements PlaceInterface {
                 building.PlaceDescription();
                 building.Move();
             }
-            default -> System.out.println("Rien ne se passe");
+            case "quit" -> {
+                Quit();
+            }
+            default -> {
+                System.out.println("Nothing happens");
+                Route route = new Route();
+                route.Move();
+            }
+
         }
 
     }
 
     @Override
     public void PlaceDescription() {
-        System.out.println("Vous êtes au bout de la route devant un petit immeuble en brique. Un petit ruisseau coule");
+        System.out.println("You are at the end of the road in front of a small brick building. A small brook flows next to the building at the bottom of a gutter..");
+        System.out.println("You can move in any direction \"north\" \"south\" \"west\" \"east\" ");
     }
 
     @Override
     public void Quit() {
-
+        System.out.println("You are at home in front of your computer in the middle of a Java class, it was all a dream");
+        System.exit(1);
     }
 }
