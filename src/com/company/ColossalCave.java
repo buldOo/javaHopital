@@ -5,6 +5,7 @@ import Place.Route;
 public class ColossalCave {
 
     public static void main(String[] args) {
+        //this is the starting of the game whit all the rules wee need
         while (true) {
             System.out.println("You just appear at the end of the road in front of a small brick building. A small brook flows next to the building at the bottom of a gutter..");
             System.out.println("You can move by using the keyword \"move\" and by using a cardinal point ex: move west");

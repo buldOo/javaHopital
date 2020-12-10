@@ -8,9 +8,11 @@ public class Route extends ColossalCave implements PlaceInterface {
 
     @Override
     public void Move() {
+        //creation of a scanner
         Scanner scanner = new Scanner(System.in);
         String inputUser = scanner.nextLine();
 
+        //creation of the different move choice
         switch (inputUser) {
             case "move west" -> {
                 Colline colline = new Colline();
@@ -35,6 +37,7 @@ public class Route extends ColossalCave implements PlaceInterface {
             case "quit" -> {
                 Quit();
             }
+            //it happens if we don't enter into any case
             default -> {
                 System.out.println("Nothing happens");
                 Route route = new Route();

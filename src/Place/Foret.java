@@ -11,6 +11,7 @@ public class Foret extends ColossalCave implements PlaceInterface {
         Scanner scanner = new Scanner(System.in);
         String inputUser = scanner.nextLine();
 
+        //creation of the different move choice
         if (inputUser.equals("move south")) {
             Route route = new Route();
             route.PlaceDescription();
