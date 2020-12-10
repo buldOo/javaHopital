@@ -4,6 +4,8 @@ public interface PlaceInterface {
 
     void Move();
 
-    void placeDescription();
+    void PlaceDescription();
+
+    void Quit();
 
 }

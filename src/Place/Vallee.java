@@ -4,17 +4,21 @@ import com.company.ColossalCave;
 
 import java.util.Scanner;
 
-public class Foret extends ColossalCave implements PlaceInterface {
+public class Vallee extends ColossalCave implements PlaceInterface{
     @Override
     public void Move() {
         Scanner scanner = new Scanner(System.in);
         String inputUser = scanner.nextLine();
 
-        if (inputUser.equals("move south")) {
+        if (inputUser.equals("move west")) {
+            Colline colline = new Colline();
+            colline.PlaceDescription();
+            colline.Move();
+        } else if (inputUser.equals("move north")) {
             Route route = new Route();
             route.PlaceDescription();
             route.Move();
-        } else if (inputUser.equals("move north") || (inputUser.equals("move west") || (inputUser.equals("move east")))) {
+        }else if (inputUser.equals("move south") || (inputUser.equals("move east"))) {
             System.out.println("La route est bloquée");
         } else {
             System.out.println("Rien ne se passe");
@@ -23,7 +27,7 @@ public class Foret extends ColossalCave implements PlaceInterface {
 
     @Override
     public void PlaceDescription() {
-        System.out.println("Vous êtes dans la foret noire. Vous entendez des hurlements stridents");
+        System.out.println("Vous êtes dans une vallée a coté d’un ruisseau. Un corps flotte là dans l’eau");
     }
 
     @Override
