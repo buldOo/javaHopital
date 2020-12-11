@@ -1,6 +1,7 @@
 package Place;
 
 import com.company.ColossalCave;
+import com.company.Main;
 
 import java.util.Scanner;
 

@@ -26,7 +26,7 @@ public class Choice {
 
         switch (selection) {
             case 1:
-                ColossalCave.Jeu();
+                ColossalCave.jeu();
                 break;
             case 2:
 
